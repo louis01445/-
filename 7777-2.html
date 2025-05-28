@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <title>網站</title>
+        <style>
+            .topen {
+                overflow: hidden;
+                background-color: gray;
+                border: 2px solid #000;
+                border-radius: 5px;
+            }
+            .topen a {
+                padding: 20px 21px;
+                background-color: #ff0000;
+                color: #000;
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: 700;
+            }
+            .topen a:hover {
+                text-decoration-line: underline;
+                text-decoration-color: red;
+                text-decoration-thickness: 5px;
+                background-color: hotpink;
+                color: red;
+            }
+            #h1 {
+                color: tomato;
+                font-size: 24px;
+                font-weight: 800;
+                font-family: "標楷體";
+                display: none;
+            }
+            #h2 {
+                color: rgb(0, 0, 0);
+                font-size: 12px;
+                font-weight: 800;
+                font-family: "標楷體";
+                display: none;
+            }
+            .box {
+                margin: auto;
+                background: rgb(255, 0, 0 , 0.5);
+                border-radius: 5px;
+                border: 5px solid #000;
+                max-width: 450px;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topen">
+            <a href="5555.html">作業1</a>
+            <a href="6666.html">作業2</a>
+            <a href="7777-2.html">作業3</a>
+            <a href="8888.html">作業4</a>
+            <a href="9999.html">作業5</a>
+        </div>
+        <div class="box">
+            <span onclick="louis()">關於我</span>
+            <span onclick="louis1()">學經歷</span>
+        </div>
+        <div id="h1">大家好</div>
+        <div id="h2">我是帥哥</div>
+        <script>
+            function louis(){
+                let h1Div=document.querySelector("#h1");
+                let h2Div=document.querySelector("#h2");
+                h1Div.style.display="none";
+                h2Div.style.display="block";
+            }
+            function louis1(){
+                let h1Div=document.querySelector("#h1");
+                let h2Div=document.querySelector("#h2");
+                h1Div.style.display="block";
+                h2Div.style.display="none";
+            }
+        </script>
+    </body>
+</html>

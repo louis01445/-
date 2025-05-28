@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <title>網站</title>
+        <style>
+            body {
+                text-align: center;
+            }
+            .topen {
+                overflow: hidden;
+                background-color: gray;
+                border: 2px solid #000;
+                border-radius: 5px;
+            }
+            .topen a {
+                padding: 20px 21px;
+                background-color: #fffb00;
+                color: #000;
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: 700;
+            }
+            .topen a:hover {
+                text-decoration-line: underline;
+                text-decoration-color: red;
+                text-decoration-thickness: 5px;
+                background-color: rgb(0, 0, 0);
+                color: red;
+            }
+            .hamburger {
+                display: none;
+                width: 30px;
+                height: 30px;
+                flex-direction: column;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+            .hamburger span {
+                background-color: #ffffff;
+                border: 2px solid #000;
+                border-radius: 5px;
+                height: 3px;
+                width: auto;
+            }
+            #h1 {
+                color: tomato;
+                font-size: 24px;
+                font-weight: 800;
+                font-family: "標楷體";
+                display: none;
+            }
+            #h2 {
+                color: rgb(0, 0, 0);
+                font-size: 12px;
+                font-weight: 800;
+                font-family: "標楷體";
+                display: none;
+            }
+            .box {
+                margin: auto;
+                background: rgba(255, 0, 0, 0.5);
+                border-radius: 5px;
+                border: 5px solid #000;
+                max-width: 510px;
+                height: auto;
+            }
+            .image {
+                border: 5px solid #000;
+                border-radius: 10px;
+                max-width: 500px;
+                transition: all 0.5s ease;
+                filter: drop-shadow(0px 10px 20px #000);
+            }
+            .image:hover {
+                transform: translateY(5px);
+                filter: drop-shadow(0px 10px 20px #000);
+            }
+            @media screen and (max-width:750px) {
+                .topen {display: none;}
+                .hamburger {display: flex;}
+                .topen.louis2 {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .topen a {
+                    border-top: 2px solid white;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hamburger" onclick="menu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="topen">
+            <a href="5555.html">作業1</a>
+            <a href="6666.html">作業2</a>
+            <a href="7777-2.html">作業3</a>
+            <a href="8888.html">作業4</a>
+            <a href="9999.html">作業5</a>
+        </div>
+        <div id="h1">2024繡球花季到啦！每年5月至6月初夏季節，粉藍、粉紫、粉紅等各色錦簇花團，從陽明山竹子湖、新北萬里高家花田、雪霸休閒農場、武陵農場、明池森林遊樂區等，精選全台超過10處觀賞繡球花的推薦景點，賞花之餘，也一起解密繡球花冷知識！</div>
+        <div id="h2">文心蘭，取其優雅文質玲瓏心，又可意會又可言傳，故在本省自從最早有「文心蘭」的稱呼出現後，便沿pic2用成習，也因其花朵頗似穿著膨鬆舞裙、迎風招展婆娑起舞的女郎，而有人稱為「跳舞蘭」，在切花和盆花市場上都佔有很重要的一席之地。</div>
+        <div class="box">
+            <span onclick="louis()">繡球花</span>
+            <img src="https://louis01445.github.io/-/%E7%B4%AB%E8%89%B2%E7%B9%A1%E7%90%83%E8%8A%B1.jpg" class="image" alt="繡球花">
+            <span onclick="louis1()">文心蘭</span>
+            <img src="https://louis01445.github.io/-/2-S__59940906_0.jpg" class="image" alt="文心蘭">
+        </div>
+        <script>
+            function louis(){
+                let h1Div=document.querySelector("#h1");
+                let h2Div=document.querySelector("#h2");
+                h1Div.style.display="none";
+                h2Div.style.display="block";
+            }
+            function louis1(){
+                let h1Div=document.querySelector("#h1");
+                let h2Div=document.querySelector("#h2");
+                h1Div.style.display="block";
+                h2Div.style.display="none";
+            }
+            function menu(){
+                const topen=document.querySelector(".topen")
+                topen.classList.toggle("louis2")
+            }
+        </script>
+    </body>
+</html>

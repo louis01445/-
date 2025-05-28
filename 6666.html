@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="utf-8">
+        <title>標題</title>
+        <style>
+            .topen {
+                overflow: hidden;
+                background-color: gray;
+                border: 2px solid #000;
+                border-radius: 5px;
+                margin: auto;
+            }
+            .topen a {
+                padding: 20px 21px;
+                background-color: #ff0000;
+                color: #000;
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: 700;
+                display: inline-block; /* Added to make padding work properly */
+            }
+            .topen a:hover {
+                text-decoration-line: underline;
+                text-decoration-color: red;
+                text-decoration-thickness: 5px;
+                background-color: hotpink;
+                color: red;
+            }
+            .bt {
+                background: linear-gradient(90deg, rgb(129, 129, 255), rgb(66, 66, 255)); /* Added commas */
+                transition: all 0.5s ease; /* Added 's' for seconds */
+                font-size: 24px;
+                width: 224px;
+                height: 60px;
+                border-radius: 5px;
+                border: 2px solid #000;
+                line-height: 20px;
+                margin: auto;
+                box-shadow: 0px 10px 12px #000;
+                display: block; /* Added for better centering */
+                cursor: pointer; /* Added to show pointer on hover */
+            }
+            .bt:hover {
+                background: linear-gradient(-90deg, rgb(129, 129, 255), rgb(66, 66, 255)); /* Added commas */
+                transform: translateY(5px);
+                box-shadow: 0px 10px 12px #000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>大家好</h1>
+        <div class="topen">
+            <a href="5555.html">作業1</a>
+            <a href="6666.html">作業2</a>
+            <a href="7777-2.html">作業3</a>
+            <a href="8888.html">作業4</a>
+            <a href="9999.html">作業5</a>
+        </div>
+        <span>
+        <button class="bt" onclick="louis()">點擊</button>
+        </span>
+        <script>
+            console.log(window.document);
+            console.log(document.title);
+            document.title = "JoJo";
+            console.log(document.body);
+            console.log(document.body.innerHTML);
+            
+            function louis() {
+                document.body.innerHTML = "我是帥哥";
+            }
+        </script>
+    </body>
+</html>

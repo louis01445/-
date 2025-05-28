@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>甜點</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .topen {
+            overflow: hidden;
+            background-color: gray;
+            border: 2px solid #000;
+            border-radius: 5px;
+        }
+        .topen a {
+            padding: 20px 21px;
+            background-color: #fffb00;
+            color: #000;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .topen a:hover {
+            text-decoration-line: underline;
+            text-decoration-color: red;
+            text-decoration-thickness: 5px;
+            background-color: rgb(0, 0, 0);
+            color: red;
+        }
+        .hamburger {
+            display: none;
+            width: 30px;
+            height: 30px;
+            flex-direction: column;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        .hamburger span {
+            background-color: #ffffff;
+            border: 2px solid #000;
+            border-radius: 5px;
+            height: 3px;
+            width: auto;
+        }
+        #h1 {
+            color: tomato;
+            font-size: 24px;
+            font-weight: 800;
+            font-family: "標楷體";
+            display: none;
+        }
+        #h2 {
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            font-weight: 800;
+            font-family: "標楷體";
+            display: none;
+        }
+        .box {
+            margin: auto;
+            background: rgba(255, 0, 0, 0.5);
+            border-radius: 5px;
+            border: 5px solid #000;
+            max-width: 510px;
+            height: auto;
+        }
+        .image {
+            border: 5px solid #000;
+            border-radius: 10px;
+            max-width: 500px;
+            transition: all 0.5s ease;
+            filter: drop-shadow(0px 10px 20px #000);
+        }
+        .image:hover {
+            transform: translateY(5px);
+            filter: drop-shadow(0px 10px 20px #000);
+        }
+        @media screen and (max-width:750px) {
+            .topen {display: none;}
+            .hamburger {display: flex;}
+            .topen.louis2 {
+                display: flex;
+                flex-direction: column;
+            }
+            .topen a {
+                border-top: 2px solid white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="hamburger" onclick="menu()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="topen">
+            <a href="5555.html">作業2</a>
+            <a href="6666.html">作業2</a>
+            <a href="7777-2.html">作業3</a>
+            <a href="8888.html">作業4</a>
+            <a href="9999.html">作業5</a>
+        </div>
+    </div>
+    
+    <!-- 修改後的單選功能 -->
+    <form id="fruitForm">
+        <input type="radio" name="fruit" value="頻果" id="apple">
+        <label for="apple">頻果</label>
+        
+        <input type="radio" name="fruit" value="西瓜" id="watermelon">
+        <label for="watermelon">西瓜</label>
+        
+        <input type="radio" name="fruit" value="香蕉" id="banana">
+        <label for="banana">香蕉</label>
+        
+        <input type="radio" name="fruit" value="芒果" id="mango">
+        <label for="mango">芒果</label>
+        
+        <br>
+        <input type="button" value="送出" onclick="submitSelection()"> 
+        <input type="reset" value="重設" onclick="resetSelection()">
+    </form>
+    
+    <script>
+        function menu(){
+            const topen=document.querySelector(".topen")
+            topen.classList.toggle("louis2")
+        }
+        
+        // 新增的提交功能
+        function submitSelection() {
+            const selectedFruit = document.querySelector('input[name="fruit"]:checked');
+            
+            if(selectedFruit) {
+                window.alert("您選擇了: " + selectedFruit.value);
+            } else {
+                window.alert("請選擇一個選項");
+            }
+        }
+        
+        // 新增的重設功能
+        function resetSelection() {
+            const radioButtons = document.querySelectorAll('input[name="fruit"]');
+            radioButtons.forEach(radio => {
+                radio.checked = false;
+            });
+            // 或者使用表單的重設功能
+            // document.getElementById("fruitForm").reset();
+        }
+    </script>
+</body>
+</html>
